@@ -10,8 +10,8 @@ import {
   putPixel32Sub,
 } from "@oliversalzburg/js-utils/graphics/canvas2d.js";
 import { fromRGBA } from "@oliversalzburg/js-utils/graphics/core.js";
-import { renderPaletteSample } from "@oliversalzburg/js-utils/graphics/palette-sampler.js";
 import { type Palette, palette, paletteName } from "@oliversalzburg/js-utils/graphics/palette.js";
+import { renderPaletteSample } from "@oliversalzburg/js-utils/graphics/palette-sampler.js";
 
 const TWO_PI = Math.PI * 2;
 
@@ -483,7 +483,7 @@ class Application {
     this.options.seed = this.random.seed;
 
     if (this.options.devMode) {
-      // biome-ignore lint/suspicious/noConsole: <explanation>
+      // biome-ignore lint/suspicious/noConsole: This runs in the browser, and we like it.
       console.log(`${new Date().toLocaleTimeString()} Moving to next scene...`);
     }
 
