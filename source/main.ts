@@ -40,10 +40,10 @@ const applicationOptions = {
   seed: seedFromString("Sand Traveler by Jared Tarbell"),
   velocity: 20,
   viewport: {
+    h: 1,
+    w: 1,
     x: 0,
     y: 0,
-    w: 1,
-    h: 1,
   },
 };
 type ApplicationOptions = typeof applicationOptions;
@@ -483,7 +483,6 @@ class Application {
     this.options.seed = this.random.seed;
 
     if (this.options.devMode) {
-      // biome-ignore lint/suspicious/noConsole: This runs in the browser, and we like it.
       console.log(`${new Date().toLocaleTimeString()} Moving to next scene...`);
     }
 
